@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Journey Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pregnancy Tracker</h1>
+        <p class="subtitle">Track your journey week by week</p>
+        
+        <div class="input-section">
+            <label for="lmp-date">First day of last period:</label>
+            <input type="date" id="lmp-date">
+            <button onclick="calculatePregnancy()">Track Progress</button>
+        </div>
+
+        <div id="dashboard" class="hidden">
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Due Date</h3>
+                    <p id="due-date">-</p>
+                </div>
+                <div class="card">
+                    <h3>Current Week</h3>
+                    <p id="current-week">-</p>
+                </div>
+                <div class="card">
+                    <h3>Days to Go</h3>
+                    <p id="days-remaining">-</p>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">0%</div>
+            </div>
+            
+            <div class="info-box">
+                <h4 id="stage-title">Your Baby's Status</h4>
+                <p id="stage-desc">Enter your date to see development milestones.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
